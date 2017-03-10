@@ -1,0 +1,1450 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+  <title>Real Deal</title>
+   
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, initial-scale=1">
+  
+
+  <script src="js/lib/modernizr-2.6.2.min.js"></script>
+  <script src="js/lib/jquery-1.10.2.min.js"></script>
+    <script src="js/lib/helpers-script-0.11.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-ui/js-ui/jquery-ui-1.10.4.custom.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="js/lib/jquery-ui/css-ui/jquery-ui-1.10.4.custom.min.css">
+   
+  <script src="js/plugins.js"></script>
+  <script src="js/core-2014-main.js?v=5"></script>
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+ 
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+   <link rel="stylesheet" type="text/css" href="css/fontello.css">
+  <link rel="stylesheet" type="text/css" href="css/mainStyle.css">
+
+  <link rel="stylesheet" type="text/css" href="css/globals.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+  <script type="text/javascript">     
+  var baseUrl = 'http://realdealhousing.com/';
+  var uId = 'indexer-8';
+  var currentUrl = 'listings';
+  var spinnerLink = "img/spinner.gif";
+  
+  
+   
+  
+  $(document).ready(function(){   
+      var clone = $('#sticky-menu .inner').clone()
+      $('#sticky-menu-target').append(clone);
+
+
+            var mainNavHtml = $('#main-nav').html()
+
+            $('#mobile-nav').html(mainNavHtml);
+            executeAsInterval('navSticker');
+      truncatePager();
+      addPlayerButtonsToVideos();
+
+
+  });
+
+  $(window).load(function(){
+    
+  });
+
+
+  
+  function navSticker(){
+    if( $('#sticky-menu').length > 0){
+      scrollTop = $(window).scrollTop();
+      //myTrace(scrollTop); 
+      
+      var position = $('#sticky-menu').offset(); 
+      var topPosition = position.top; 
+      var clipPoint = scrollTop-topPosition+160;
+            //myTrace('clipPoint '+clipPoint);  
+      
+      //var clippingPoint = $('#sticky-menu').attr('data-clipping-point');
+      
+      if(clipPoint > 0 && windowWidth > 600){
+        ///$('#sticky-menu-target').fadeIn(); 
+        $('#sticky-menu-target').slideDown();
+      }
+      else{
+        //$('#sticky-menu').fadeOut;
+        $('#sticky-menu-target').slideUp(); 
+      }
+    }
+  }
+  
+  </script>
+</head>
+
+
+
+<!-- uId: homepage-1 / homepage-1 -->
+<body class="homepage-body  homepage-1-entity" style="opacity: 1;">
+<div id="page-body">
+
+<a id="top" name="top"></a>
+<header>
+    
+<div id="hambuger">
+    <a href="javascript:toggleMiniNav()">
+        <img id="mini-nav" src="img/mini-nav-icon.png">
+    </a>
+</div>
+
+
+<a id="logo-wrapper" href="#"><img id="logo" src="img/logoSvg.svg" alt="Real Deal"></a>
+<nav id="mobile-nav" class="main-nav">
+    
+<ul class="level-1">
+   <li id="standardpage-16-node" class="level-1 normal standardpage-16-node"><a href="index.html" class="level-1 normal standardpage-16-node ">Home</a></li>
+   <li id="standardpage-20-node" class="level-1 normal standardpage-20-node"><a href='properties.html' class="level-1 normal standardpage-20-node ">Properties</a></li>
+   <li id="standardpage-25-node" class="level-2 normal standardpage-25-node"><a href="developments" class="level-2 normal standardpage-25-node ">Developments</a></li>
+   <li id="standardpage-1-node" class="level-1 normal standardpage-1-node"><a href="blog.html" class="level-1 normal standardpage-1-node ">Blog</a></li>
+<li class="menu-span"></li>
+</ul>
+</nav>
+
+<nav id="main-nav" class="main-nav">
+    
+<ul class="level-1">
+  <li id="standardpage-16-node" class="level-1 normal standardpage-16-node"><a href="index.html" class="level-1 normal standardpage-16-node ">Home</a></li>
+   <li id="standardpage-20-node" class="level-1 normal standardpage-20-node"><a href='properties.html' class="level-1 normal standardpage-20-node ">Properties</a></li>
+   <li id="standardpage-25-node" class="level-2 normal standardpage-25-node"><a href="developments.html" class="level-2 normal standardpage-25-node ">Developments</a></li>
+   <li id="standardpage-1-node" class="level-1 normal standardpage-1-node"><a href="blog.html" class="level-1 normal standardpage-1-node ">Blog</a></li>
+<li class="menu-span"></li>
+</ul>
+</nav>
+<div id="nav-border-line"></div>
+<div id="listing-header-alt-headline"></div>
+
+<div id="search-site">
+
+    <form action="search" type="get">
+        <input type="text" name="q">
+
+    </form>
+</div>
+
+<ul id="page-functions" class="hidden  visible-lg">
+
+    <li><a href="https://www.facebook.com" target="_blank">
+            <span class="state-hover">
+                <img class="mouse-out" src="img/facebook-icon-grey.svg">
+                <img class="mouse-over" src="img/facebook-icon-red (1).svg">
+            </span>
+        </a>
+    </li>
+    <li>
+        <a href="//instagram.com" target="_blank" onclick="ga('send','event','page','instagram click','')">
+            <span class="state-hover">
+                <img class="mouse-out" src="img/instagram-icon-grey.svg">
+                <img class="mouse-over" src="img/instagram-icon-red (1).svg">
+            </span>
+        </a>
+    </li>
+     <li>
+        <a href="https://www.linkedin.com/feed/" target="_blank" onclick="ga('send','event','page','youtube click','')">
+             <span class="state-hover">
+                <img class="mouse-out" src="img/in-icon-gray.svg">
+                <img class="mouse-over" src="img/in-icon-red.svg">
+            </span>
+        </a>
+    </li>
+  <li>
+        <a href="https://twitter.com" target="_blank" onclick="ga('send','event','page','twitter click','')">
+             <span class="state-hover">
+                <img class="mouse-out" src="img/twitter-icon-grey.svg">
+                <img class="mouse-over" src="img/twitter-icon-red (1).svg">
+            </span>
+        </a>
+    </li>
+    
+   
+    <li class="subscribe">
+        <a href="#">Subscribe</a>
+    </li>
+</ul>
+<!-- Content injection via Javascript on listing overview page-->
+<div id="listing-filter-toggle" class="hidden visible-xs visible-sm visible-md"></div>      
+
+<div id="sticky-menu-target">
+
+</div>
+</header>
+<!--                 header end                 -->
+<main>  
+<link href="noSl/nouislider.css" rel="stylesheet">
+<script src="noSl/nouislider.js"></script>
+
+<script type="application/javascript">
+// property filter settings 
+
+
+var minprice = 0;
+var maxprice = 10000000;
+var pricesteps = 50000;
+
+var rentalmaxprice = 200000;
+var rentalpricesteps = 200;
+
+var maxpricetext = "No Maximum";
+
+var minbeds = 0;
+var minbedstext = "Studio";
+var maxbeds = 7;
+var maxbedstext = "7+";
+
+var minbaths = 0;
+var maxbaths = 7;
+var maxbathstext = "7+";
+
+
+
+var timeoutInterval;
+var mode = '';
+
+var sliderMode =  'sales';
+var lastSliderMode = 'sales';
+
+
+
+
+function initializeListingScripts(){
+
+  setNbhGroupTab('manhattan');
+
+
+  if ($('#listings-filters').length > 0) {
+    initListingFilters();
+  }
+  
+  //$(window).hashchange(function() {filterListings(location.hash) });  
+  //filterListings(location.hash);
+  $("#listings-filters input:checkbox").click(function() {
+      //console.log("click: "+$(this).val()+' '+$(this).attr('checked'));
+      if($(this).attr('checked')){
+        $(this).attr('checked',false);
+      }else{
+        $(this).attr('checked',true)
+      }
+      //console.log($(this).val()+' '+$(this).attr('checked'));
+      filterListings();
+  });
+
+
+
+       
+   $('#listings_search_body_input').keyup(function() {
+     if($('#listings_search_body_input').val().length <3){
+      filterListings();
+     }
+     else{
+      typeFeedback();     
+     }
+   })
+
+}
+
+function fadeInListings(){
+  $(".listings-list .listing-teaser").delay(1000).fadeTo(1500,1); 
+}
+
+function filterListings(){
+  
+  clearTimeout(timeoutInterval);
+  timeoutInterval = setTimeout("runQuery()",200);
+}
+
+
+function runQuery(){
+  
+  checkIfRentalOnlySearch();
+  var val = '';
+  val = $("#listings-filters input").serialize();
+
+}
+
+
+
+function checkIfRentalOnlySearch(){
+  var forsale = $('#forsale:checked').val();
+  var rentals = $('#rentals:checked').val(); 
+  if(forsale != 'yes' && rentals == 'yes'){
+    sliderMode = 'rentals';   
+  }
+  else{
+    sliderMode = 'sales';     
+  } 
+  
+  if(lastSliderMode != sliderMode){
+    setPriceSlider();
+    lastSliderMode = sliderMode;  
+  }
+  
+}
+
+
+
+function setPriceSlider(){
+  var newMaxPrice  = maxprice;
+  var newStepsPrice  = pricesteps;
+  
+  // alert('setPriceSlider '+sliderMode);
+  
+  if(sliderMode == 'rentals'){
+    newMaxPrice = rentalmaxprice;
+    newStepsPrice = rentalpricesteps;
+
+  }
+  else{
+
+  }
+ // alert(newMaxPrice);
+
+  amountSlider.noUiSlider.updateOptions({
+    range: {
+      'min': minprice,
+      'max': newMaxPrice
+    },
+    step :newStepsPrice
+  });
+
+  amountSlider.noUiSlider.set(minprice,newMaxPrice);
+}
+
+
+
+
+var allNbh = true;
+var allManh = true;
+
+
+function showListingMessage(){
+  $('.no-result-general-tile').remove();
+  var html = $('#no-result-general').html();
+  var lastNbhGroup = $('#lastNbhGroup').val();
+
+
+
+  // if($('.no-result-brooklyn-tile').length <= 0){
+  //   html = $('#no-result-general').html();
+  //   $('#ajax-return-listings').append(html);
+  // }
+  
+}
+
+// to prevent the first update from triggering the event.
+var hadOneUpdate = false;
+function notifyUpdate(){
+  if(windowWidth <= 600 && hadOneUpdate == true){
+    $('.update-note').remove();
+    $('body').append('<div class="update-note">Results updated</div>');
+    var fadeTO = setTimeout("$('.update-note').fadeOut(3000)",1000);
+  }
+  hadOneUpdate = true;
+}
+
+//filtermode blocks the ajax event so the two ajax calles can not overwrite each other
+// var filterMode = '';
+// var xhr = $.ajax({});
+
+// function getListingsInfo(val){
+//     xhr.abort();
+//     filterMode = 'slider';
+//     $('#message-box').hide();
+//     $("#spinner-image-container").show();
+//     $(".listings-list").fadeTo(500,0.2);
+//     xhr = $.ajax({
+//          type: 'GET',
+//          url: 'properties.html',
+//          data: 'ajax=true&'+val+'&listingsearch=true',
+//          success: function(msg){
+//           if(filterMode == 'slider'){
+//             $(".listings-list").html(msg);
+//             $("#spinner-image-container").stop(true,true).hide();
+//             ga('send','event','listings','listings search',encodeURIComponent(val));
+//             //_gaq.push(['_trackEvent','listings','listings search',encodeURIComponent(val)]);
+//             $(".listings-list").stop(true,true).fadeTo(500,1);            
+//             $(".listings-list .listing-teaser").fadeTo(500,1);  
+//             // this forces the rebuild of the placeholders
+//             oldWindowWidth = 0;
+//               checkIfBrooklynSearch();
+//             appendPlaceHolders();
+//             if('' == msg ){
+//               showListingMessage();
+//             }
+//               notifyUpdate();
+//            }
+
+//         }
+//     });               
+// };
+
+var hasBrooklyn = false;
+function checkIfBrooklynSearch(){
+  hasBrooklyn = false;
+  //console.log("checkIfBrooklynSearch");
+  // find all checked Brooklyn
+  $('.no-result-brooklyn-tile').remove();
+  $('.search-checkoption').each(function(){
+    if('brooklyn' == $(this).attr('data-group')){
+      //console.log($(this).find('input').val());
+      //console.log($(this).find('input'));
+      if($(this).find('input').attr('checked')){
+        hasBrooklyn = true
+        //console.log("found: "+$(this).find('input').val());
+        //console.log("found: "+$(this).find('input').attr('checked'));
+      }
+    }
+  });
+  //console.log("checkIfBrooklynSearch hasBrooklyn:"+hasBrooklyn);
+  //if we have a brooklyn search, check if we found something in brooklyn
+  if(true == hasBrooklyn){
+    var foundSomethingInBrooklyn = false;
+    $('#ajax-return-listings .listing-teaser').each(function(){
+      //console.log("and "+jQuery.inArray($(this).attr('data-nbh'), brooklynOptions ));
+      if(jQuery.inArray($(this).attr('data-nbh'), brooklynOptions ) > -1){
+        foundSomethingInBrooklyn = true;
+
+      }
+    });
+
+    //if did not find anything in Brooklyn add the Brooklyn Listing message
+    // if(false == foundSomethingInBrooklyn){
+    //   var html = $('#no-result-brooklyn').html();
+    //   $('#ajax-return-listings').append(html);
+    // }
+  }
+
+}
+
+
+
+  
+
+
+
+function typeFeedback(){
+  clearTimeout(timeoutInterval);
+  timeoutInterval = setTimeout("filterByAddress()",200);
+}
+
+// function filterByAddress(){
+   
+//     filterMode = 'searchboxinput'
+//     $('#message-box').hide();
+//     searchboxinput = $('#listings_search_body_input').val();
+//     $("#spinner-image-container").show();
+//     $(".listings-list").fadeTo(500,0.2);
+   
+//     $.ajax({
+//          type: 'GET',
+//          url: 'listings',
+//          data: 'ajax=true&searchboxinput='+encodeURIComponent(searchboxinput)+'&listingsearch=true',
+//          success: function(msg){
+//            if(filterMode == 'searchboxinput'){
+//             ga('send','event','listings','listings search - address','searchboxinput='+encodeURIComponent(searchboxinput));
+            
+//             $(".listings-list").html(msg);
+//             $("#spinner-image-container").stop(true,true).hide();
+//             $(".listings-list").stop(true,true).fadeTo(500,1);
+//             // this force the rebuild of the placeholders
+//             $(".listings-list .listing-teaser").fadeTo(500,1);  
+//             oldWindowWidth = 0;
+//             appendPlaceHolders();
+//               notifyUpdate();
+//           }
+//         }
+//     });               
+// };
+
+
+
+
+
+
+
+var amountSlider;
+var lastSelectedMinPrice = 0;
+var lastSelectedMaxPrice = maxprice;
+
+
+var bedsSlider;
+var lastSelectedMinBeds = 0;
+var lastSelectedMaxBeds= maxbeds
+
+var bathSlider;
+var lastSelectedMinBaths = 0;
+var lastSelectedMaxBaths = maxbaths;
+
+function initListingFilters() {
+  // alert('initListingFilters');
+  // alert(lastSelectedMaxBaths);
+
+  amountSlider = document.getElementById('slider-amount');
+  noUiSlider.create(amountSlider, {
+    start: [lastSelectedMinPrice, lastSelectedMaxPrice],
+    connect: true,
+    step: pricesteps,
+    range: {
+      'min':[ minprice],
+      'max': [maxprice]
+    }
+  });
+
+  amountSlider.noUiSlider.on('update', function( values, handle ) {
+    var maxtext = values[1];
+    if (maxtext == maxprice) {
+      maxtext = maxpricetext;
+    } else {
+      maxtext = "$" + formatCurrency(maxtext);
+    }
+
+    $('#amount').html("$" + formatCurrency(values[0]) + " to " + maxtext);
+    $('[name=amountmin]').val(values[0]);
+    $('[name=amountmax]').val(values[1]);
+    filterListings();
+  });
+
+
+  bedsSlider = document.getElementById('slider-bedrooms');
+  noUiSlider.create(bedsSlider, {
+    start: [lastSelectedMinBeds, lastSelectedMaxBeds],
+    connect: true,
+    step: 1,
+    range: {
+      'min':[ minbeds],
+      'max': [maxbeds]
+    }
+  });
+
+  ///
+  bedsSlider.noUiSlider.on('update', function( values, handle ) {
+    var mintext = Math.round(values[0]);
+    var maxtext =  Math.round(values[1]);
+    if (mintext == minbeds) {
+      mintext = minbedstext;
+    }
+    if (maxtext == maxbeds) {
+      maxtext = maxbedstext;
+    }
+    $('#bedrooms').html(mintext + " to " + maxtext);
+    $('[name=bedsmin]').val(Math.round(values[0]));
+    $('[name=bedsmax]').val(Math.round(values[1]));
+    filterListings();
+  });
+
+  bathSlider = document.getElementById('slider-baths');
+  noUiSlider.create(bathSlider, {
+    start: [lastSelectedMinBaths, lastSelectedMaxBaths],
+    connect: true,
+    step: 1,
+    range: {
+      'min':[ minbaths],
+      'max': [maxbaths]
+    }
+  });
+
+  ///
+  bathSlider.noUiSlider.on('update', function( values, handle ) {
+    var mintext = Math.round(values[0]);
+    var maxtext =  Math.round(values[1]);
+    if (maxtext == maxbeds) {
+      maxtext = maxbedstext;
+    }
+    $('#baths').html(mintext + " to " + maxtext);
+    $('[name=bathsmin]').val(Math.round(values[0]));
+    $('[name=bathsmax]').val(Math.round(values[1]));
+    filterListings();
+  });
+
+}
+
+function initListingFiltersBAK() {
+    /*
+    $('#slider-amount').slider({
+      range:  true,
+      min:  minprice,
+      max:  maxprice,
+      step: pricesteps,
+      values: [0, maxprice],
+      slide:  function(event, ui) {
+            var maxtext = ui.values[1];
+            if (maxtext == maxprice) {
+              maxtext = maxpricetext;
+            } else {
+              maxtext = "$" + formatCurrency(maxtext);
+            }
+            $('#amount').html("$" + formatCurrency(ui.values[0]) + " to " + maxtext);
+            $('[name=amountmin]').val(ui.values[0]);
+            $('[name=amountmax]').val(ui.values[1]);
+            filterListings(); 
+          }
+    });
+
+
+    $('#slider-bedrooms').slider({
+      range:  true,
+      min:  minbeds,
+      max:  maxbeds,
+      values: [0, maxbeds],
+      slide:  function(event, ui) {
+            var mintext = ui.values[0];
+            var maxtext = ui.values[1];
+            if (mintext == minbeds) {
+              mintext = minbedstext;
+            } 
+            if (maxtext == maxbeds) {
+              maxtext = maxbedstext;
+            } 
+            $('#bedrooms').html(mintext + " to " + maxtext);
+            $('[name=bedsmin]').val(ui.values[0]);
+            $('[name=bedsmax]').val(ui.values[1]);
+            filterListings();         
+          }
+    });
+    
+    $('#slider-baths').slider({
+      range:  true,
+      min:  minbaths,
+      max:  maxbaths,
+      values: [0, maxbaths],
+      slide:  function(event, ui) {
+            var maxtext = ui.values[1];
+            if (maxtext == maxbeds) {
+              maxtext = maxbedstext;
+            }   
+            $('#baths').html(ui.values[0] + " to " + maxtext);
+            $('[name=bathsmin]').val(ui.values[0]);
+            $('[name=bathsmax]').val(ui.values[1]);           
+            filterListings();
+          }
+    });
+    
+    $("#amount").html("$" + $("#slider-amount").slider("values", 0) + " to " + maxpricetext);
+    $("#bedrooms").html(minbedstext + " to " + maxbedstext);
+    $("#baths").html($("#slider-baths").slider("values", 0) + " to " + maxbathstext);
+    */
+}
+
+function toggleAllOffNbh(value){
+  // alert($(event.target).attr('checked'));
+  // alert('toggleAllOffNbh: '+value);
+
+  $('#AllNyc').attr('checked',false);
+  $('#AllNyc')[0].checked = false;
+
+  var setTo = true;
+
+  if($(event.target).attr('checked')){
+    setTo = false;
+  }
+
+  $(".search-checkoption").each(function() {
+    if(value == $(this).attr('data-group') && false == $(this).find('input').hasClass('all-toggle')){
+      var input = $(this).find('input');
+      input.attr('checked',setTo);
+      input[0].checked = setTo;
+    }
+  });
+
+  /*
+  if(value == 'all-nyc'){
+    $(".nbh-checkoptions .search-checkoption").each(function() {
+      if(false == $(this).find('input').hasClass('all-toggle')){
+        var input = $(this).find('input');
+        if(input.attr('checked')){
+          input.attr('checked',false);
+          input[0].checked = false;
+        }else{
+          input.attr('checked',true);
+          input[0].checked = true;
+        }
+      }
+    });
+
+    if(false == $('#AllNyc').attr('checked')){
+      $('#AllBrooklyn').attr('checked',false);
+      $('#AllBrooklyn')[0].checked = false;
+      $('#AllManhattan').attr('checked',false);
+      $('#AllManhattan')[0].checked = false;
+    }else{
+      $('#AllBrooklyn').attr('checked',true);
+      $('#AllBrooklyn')[0].checked = true;
+      $('#AllManhattan').attr('checked',true);
+      $('#AllManhattan')[0].checked = true;
+    }
+  };
+  */
+  filterListings();
+
+}
+
+function toggleAllNYC(value){
+  // alert('toggleAllNYC');
+
+  if($('#AllNyc').attr('checked')){
+    $(".nbh-checkoptions .search-checkoption").each(function() {
+      if('AllNyc' != $(this).find('input').attr('id')){
+        var input = $(this).find('input');
+        input.attr('checked',false);
+        input[0].checked = false;
+      }
+    });
+  }else{
+
+    $(".nbh-checkoptions .search-checkoption").each(function() {
+      if('AllNyc' != $(this).find('input').attr('id')){
+        var input = $(this).find('input');
+        input.attr('checked',true);
+        input[0].checked = true;
+      }
+    });
+  }
+}
+
+/*   no longer in use
+function toggleCheckBoxes(value){
+  var handle;
+  if("all" == value){
+    handle = '';
+    if($('#slct-all')[0].checked == true){
+      handle = true
+      allNbh = true
+    } else {
+      handle = false
+      allNbh = false
+    }
+    $('#borough')[0].checked = handle;
+    $(".nbh").each(function(element){
+      $(this)[0].checked = handle
+    });
+  }
+}
+*/
+
+function toggleNbhGroupTab(elem){
+
+  setNbhGroupTab($(elem).parent().attr('data-group'));
+  //event.preventDefault();
+  return false;
+}
+
+function setNbhGroupTab(value){
+  //console.log(value);
+  $('.nbh-group-selector li').removeClass('active');
+  $('.nbh-group-selector ').find("[data-group='" + value + "']").addClass('active');
+  $('#lastNbhGroup').val(value);
+  $('.nbh-checkoptions .search-checkoption').hide();
+  $('.nbh-checkoptions').find("[data-group='" + value + "']").show();
+}
+
+function formatCurrency(num) {
+  num = num.toString().replace(/\$|\,/g,'');
+  if(isNaN(num))
+  num = "0";
+  sign = (num == (num = Math.abs(num)));
+  num = Math.floor(num*100+0.50000000001);
+  cents = num%100;
+  num = Math.floor(num/100).toString();
+  if(cents<10)
+  cents = "0" + cents;
+  for (var i = 0; i < Math.floor((num.length-(1+i))/3); i++)
+  num = num.substring(0,num.length-(4*i+3))+','+
+  num.substring(num.length-(4*i+3));
+  return (num);
+} </script>
+
+
+<script>
+$(document).ready(function() {
+  //$(window).hashchange(function() {filterListings(location.hash) });  
+  //filterListings(location.hash);
+    injectListingFilterToggle();
+  appendPlaceHolders();
+  executeAsInterval('checkResizeHolders');
+  initializeListingScripts();
+  fadeInListings();
+});
+
+
+function injectListingFilterToggle(){
+    $('#listing-filter-toggle').html('<div class="listing-filter-toggle_button"><a class="button large-button" href="javascript:toggleListingFilters()"><span>Hide&nbsp;</span>Filter</a></div>');
+}
+
+
+function toggleListingFilters(){
+    scrollToTop();
+    $('#listings-filters').toggleClass('filter-visible');
+    $('.listing-filter-toggle_button').toggleClass('filter-visible');
+}
+
+var oldWindowWidth = 0;
+function appendPlaceHolders(){
+  flushPlaceHolders();
+  if(windowWidth > 1024){
+    $('.listings-list').prepend('<li id="listings-list-placeholder-1" class="listings-list placeholder" ></li>');
+    $('.listings-list li:nth-of-type(4)').before('<li id="listings-list-placeholder-2" class="listings-list placeholder" ></li>');
+    $('.listings-list li:nth-of-type(7)').before('<li id="listings-list-placeholder-3" class="listings-list placeholder" ></li>');  
+  }
+  oldWindowWidth = windowWidth;
+}
+
+
+function checkResizeHolders(){
+  if(oldWindowWidth != windowWidth){
+    appendPlaceHolders();   
+  }
+}
+
+
+
+function flushPlaceHolders(){
+  $('#listings-list-placeholder-1').remove();
+  $('#listings-list-placeholder-2').remove();
+  $('#listings-list-placeholder-3').remove();
+}
+
+</script>
+<h1>Listings</h1>
+<section class="listings">
+    <div id="listings-filters">
+        <h4>Price range:</h4>
+<div class="slider">
+            <div id="slider-amount" class="noUi-target noUi-ltr noUi-horizontal">
+            </div>
+            <p class="slidervalue" id="amount">$0 to No Maximum</p>
+            <input name="amountmin" type="hidden" value="0.00">
+            <input name="amountmax" type="hidden" value="10000000.00">
+  </div>
+        <h4>Bedrooms</h4>
+        <div class="slider">
+            <div id="slider-bedrooms" class="noUi-target noUi-ltr noUi-horizontal"></div>
+            <p class="slidervalue" id="bedrooms">Studio to 7+</p>
+            <input name="bedsmin" type="hidden" value="0">
+            <input name="bedsmax" type="hidden" value="7">
+        </div>
+        <h4>Baths</h4>
+        <div class="slider">
+            <div id="slider-baths" class="noUi-target noUi-ltr noUi-horizontal"></div>
+            <p class="slidervalue" id="baths">0 to 7+</p>
+            <input name="bathsmin" type="hidden" value="0">
+            <input name="bathsmax" type="hidden" value="7">
+        </div>
+
+        <div class="search-balconies noheadline">
+            <label style="text-transform: uppercase;">Number of balconies
+                <input type="number" name="forsale" value="yes" id="balconies" min="0" max="3">
+                </label>
+        </div>
+
+        <div class="search-checkoption noheadline">
+            <label>
+                <input type="checkbox" name="forsale" checked="checked" value="yes" id="forsale">
+                For Sale</label>
+        </div>
+        <div class="search-checkoption noheadline">
+            <label>
+                <input type="checkbox" name="rentals" checked="checked" value="yes" id="rentals">
+                For Rent</label>
+        </div>
+<h4 style="margin-top: 60px;">Availability</h4>
+        <div class="search-checkoption noheadline" style="    float: right;">
+            <label>
+                <input type="radio" name="availability" value="yes" id="forsale">
+                Under Construction</label>
+        </div>
+        <div class="search-checkoption noheadline" >
+            <label>
+                <input type="radio" name="availability" checked="checked" value="yes" id="rentals">
+                Ready to move in</label>
+        </div>
+
+
+        <h4 style="margin-top: 60px;">Built Up Area(in sq feet)</h4>
+        <input type="number" class="txt" value="" id="listings_search_body_input">
+
+        <h4>Carpet Area(in sq feet)</h4>
+        <input type="number" class="txt" value="" id="listings_search_body_input">
+
+        <h4>Additional Features</h4>
+        <input type="number" class="txt" value="" id="listings_search_body_input">
+
+        <div class="clearfix">&nbsp;</div>
+        <h4>Search listings by address or agent</h4>
+        <input type="text" class="txt" value="" id="listings_search_body_input">
+
+        
+
+        <!--
+        <div class="search-checkoption ">
+            <label>
+                <input type="checkbox" name="allnbh" value="all" onclick="toggleCheckBoxes('all')" id="slct-all">
+                Select/ De-select All</label>
+        </div>
+
+        <div class="search-checkoption">
+            <label>
+                <input type="checkbox" name="sect[0]" value="Brooklyn" id="borough">
+                Brooklyn</label>
+        </div>
+         -->
+
+   
+        <script>
+            var brooklynOptions = ["Bay Ridge","Bedford Stuyvesant","Bensonhurst","Boerum Hill","Borough Park","Brighton Beach","Brooklyn Heights","Brooklyn Navy Yard","Brownsville","Bushwick","Canarsie","Carroll Gardens","Clinton Hill","Cobble Hill","Columbia Waterfront","Crown Heights","Ditmas Park","Downtown Brooklyn","Dumbo","Dyker Heights","East Flatbush","East NY","Flatbush","Fort Greene","Gowanus","Gravesend","Greenpoint","Greenwood","Kensington","Lefferts Gardens","Manhattan Beach","Midwood","Mill Basin","Park Slope","Prospect-Lefferts Gardens","Prospect Heights","Prospect Park South","Red Hook","Sea Gate","Sheepshead Bay","Sunset Park","Vinegar Hill","Williamsburg"];
+            $(document).ready(function(){
+                 // move the box All Manhattan directly below All NYC
+                //$('.search-checkoption:nth-of-type(2)').remove();
+
+                 $('.search-checkoption:nth-of-type(2)').insertAfter($('#BatteryParkCityOption'));
+            });
+        </script>
+            
+         <div class="clearfix">&nbsp;</div>
+        
+  
+    </div>
+    <div id="spinner-image-container" style="display: none;">
+          <img id="spinner-image" src="img/spinner.gif" alt="" title=""> 
+  </div>
+    <div id="message-box" style="display: none;">
+      
+    </div>
+    <script id="no-result-general" type="text/html">
+        <li class="listing-teaser no-result-general-tile" style="opacity: 1; display: list-item;">
+            <p class="listing-info">Your search did not return a result.</p>
+        </li>
+
+    </script>
+
+    <script id="no-result-brooklyn" type="text/html">
+        <li class="listing-teaser no-result-brooklyn-tile" style="opacity: 1; display: list-item;">
+            <a href="tel:718-489-8449">
+                <div class="img-container"><img src="public/app-assets/app-content/May_180-Smith-Street_02.jpg" ></div>
+            </a>
+            <p class="listing-info">For more information on Brooklyn listings, please contact Michael Guerra at
+                <a class="tel" href="tel:718-489-8449">718-489-8449.</a></p>
+            <p class="listing-contact">&nbsp;</p>
+        </li>
+    </script>
+
+    <ul id="ajax-return-listings" class="listings-list" style="opacity: 1;">
+    <li class="listing-teaser" data-nbh="Tribeca" style="opacity: 1; display: list-item;">
+  <a href="li-1.html">
+    <div class="img-container">
+    <img src="img/listing-img/media.realplusonline.com--CORE-14652719-205_East_92nd_Street_37C_01.jpg" alt="464 Greenwich Street"></div>
+  </a>
+    <p class="listing-prize">$27,500,000</p>
+    <p class="listing-name">464 Greenwich Street</p>
+    <p class="listing-info">5 Beds / 5.5 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Flatiron" style="opacity: 1; display: list-item;">
+  <a href="23-east-22nd-street-ph55-56">
+    <div class="img-container"><img src="img/listing-img/media.realplusonline.com--CORE-16114917-936A_Lafayette_Avenue_3_01.jpg" alt="23 East 22nd Street, PH55/56"></div>
+  </a>
+    <p class="listing-prize">$26,950,000</p>
+    <p class="listing-name">23 East 22nd Street, PH55/56</p>
+    <p class="listing-info">5 Beds / 5.5 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Nolita" style="opacity: 1; display: list-item;">
+  <a href="38-prince-street">
+    <div class="img-container"><img src="img/listing-img/s3.amazonaws.com-core-email-marketing-email_marketing-core-custom_listings-16001_Collins_Ave_3005_FL_33160_01.jpg" alt="38 Prince Street"></div>
+  </a>
+    <p class="listing-prize">$25,000,000</p>
+    <p class="listing-name">38 Prince Street</p>
+    <p class="listing-info">7 Beds / 7.5 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="West Village" style="opacity: 1; display: list-item;">
+  <a href="74-bank-street">
+    <div class="img-container"><img src="img/listing-img/s3.amazonaws.com-core-listing-images-2016-08-25-220_west_111th_street_2b_01-757.jpg" alt="74 Bank Street"></div>
+  </a>
+    <p class="listing-prize">$24,500,000</p>
+    <p class="listing-name">74 Bank Street</p>
+    <p class="listing-info">5 Beds / 3.5 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Tribeca" style="opacity: 1; display: list-item;">
+  <a href="140-franklin-street-5b">
+    <div class="img-container"><img src="img/listing-img/s3.amazonaws.com-core-listing-images-2016-08-24-140_west_71st_street_8g_01-730.jpg" alt="140 Franklin Street, 5B"></div>
+  </a>
+    <p class="listing-prize">$19,950,000</p>
+    <p class="listing-name">140 Franklin Street, 5B</p>
+    <p class="listing-info">5 Beds / 5.5 Baths</p>
+    <p class="open-house-info"><span class="label">Open House:</span><span>Wed, Mar 8th, 12:00 - 2:00 </span><br></p>    <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Tribeca" style="opacity: 1; display: list-item;">
+  <a href="70-laight-street">
+    <div class="img-container"><img src="img/listing-img/s3.amazonaws.com-core-listing-images-2016-08-22-332_east_77th_street_14_01-676.jpg" alt="70 Laight Street"></div>
+  </a>
+    <p class="listing-prize">$19,000,000</p>
+    <p class="listing-name">70 Laight Street</p>
+    <p class="listing-info">5 Beds / 6 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Chelsea" style="opacity: 1; display: list-item;">
+  <a href="100-eleventh-avenue-19thfloor">
+    <div class="img-container"><img src="img/listing-img/s3.amazonaws.com-core-listing-images-2016-07-22-425_west_53rd_street_ph3_01-306.jpg" alt="100 Eleventh Avenue, 19THFLOOR"></div>
+  </a>
+    <p class="listing-prize">$18,800,000</p>
+    <p class="listing-name">100 Eleventh Avenue, 19THFLOOR</p>
+    <p class="listing-info">6 Beds / 6.5 Baths</p>
+    <p class="open-house-info"><span class="label">Open House:</span><span>Sun, Mar 12th, 12:00 - 1:30 </span><br></p>    <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Tribeca" style="opacity: 1; display: list-item;">
+  <a href="87-leonard-street-penthouseb">
+    <div class="img-container"><img src="img/listing-img/media.realplusonline.com--CORE-11287020-23_East_22nd_Street_apt8_01 (1).jpg" alt="87 Leonard Street, PENTHOUSEB"></div>
+  </a>
+    <p class="listing-prize">$10,750,000</p>
+    <p class="listing-name">87 Leonard Street, PENTHOUSEB</p>
+    <p class="listing-info">3 Beds / 4.5 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Noho" style="opacity: 1; display: list-item;">
+  <a href="25-bond-street-2e">
+    <div class="img-container"><img src="img/listing-img/media.realplusonline.com--CORE-11287020-23_East_22nd_Street_apt8_01.jpg" alt="25 Bond Street, 2E"></div>
+  </a>
+    <p class="listing-prize">$10,000,000</p>
+    <p class="listing-name">25 Bond Street, 2E</p>
+    <p class="listing-info">3 Beds / 3.5 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Flatiron" style="opacity: 1; display: list-item;">
+  <a href="23-east-22nd-street-8fl">
+    <div class="img-container"><img src="img/listing-img/media.realplusonline.com--CORE-12477096-140_Franklin_Street_5B_04 (1).jpg" alt="23 East 22nd Street, 8FL"></div>
+  </a>
+    <p class="listing-prize">$9,995,000</p>
+    <p class="listing-name">23 East 22nd Street, 8FL</p>
+    <p class="listing-info">3 Beds / 3.5 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Soho" style="opacity: 1; display: list-item;">
+  <a href="42-crosby-street-3s">
+    <div class="img-container"><img src="img/listing-img/media.realplusonline.com--CORE-12477096-140_Franklin_Street_5B_04 (2).jpg" alt="42 Crosby Street, 3S"></div>
+  </a>
+    <p class="listing-prize">$9,950,000</p>
+    <p class="listing-name">42 Crosby Street, 3S</p>
+    <p class="listing-info">3 Beds / 4 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Soho" style="opacity: 1; display: list-item;">
+  <a href="42-crosby-street-2s">
+    <div class="img-container"><img src="img/listing-img/media.realplusonline.com--CORE-13988676-144_Franklin_Street_building_01.jpg" alt="42 Crosby Street, 2S"></div>
+  </a>
+    <p class="listing-prize">$9,700,000</p>
+    <p class="listing-name">42 Crosby Street, 2S</p>
+    <p class="listing-info">3 Beds / 4 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Sunny Isles, Florida" style="opacity: 1; display: list-item;">
+  <a href="19575-collins-avenue-34">
+    <div class="img-container"><img src="img/listing-img/media.realplusonline.com--CORE-14461678-117_East_57th_Street_18B_01.jpg" alt="19575 Collins Avenue, 34"></div>
+  </a>
+    <p class="listing-prize">$9,650,000</p>
+    <p class="listing-name">19575 Collins Avenue, 34</p>
+    <p class="listing-info">4 Beds / 5 full 1 Half Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Midtown West" style="opacity: 1; display: list-item;">
+  <a href="230-west-56th-street-50f">
+    <div class="img-container"><img src="img/listing-img/media.realplusonline.com--CORE-14652719-205_East_92nd_Street_37C_01.jpg" alt="230 West 56th Street, 50F"></div>
+  </a>
+    <p class="listing-prize">$9,495,000</p>
+    <p class="listing-name">230 West 56th Street, 50F</p>
+    <p class="listing-info">4 Beds / 3.5 Baths</p>
+    <p class="open-house-info"><span class="label">Open House:</span><span>Thu, Mar 9th, 12:00 - 1:30 </span><br></p>    <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Upper East Side" style="opacity: 1; display: list-item;">
+  <a href="223-east-62nd-street">
+    <div class="img-container"><img src="img/listing-img/media.realplusonline.com--CORE-14881913-70_72_Laight_Street_01.jpg" alt="223 East 62nd Street"></div>
+  </a>
+    <p class="listing-prize">$9,400,000</p>
+    <p class="listing-name">223 East 62nd Street</p>
+    <p class="listing-info">4 Beds / 5.5 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Tribeca" style="opacity: 1; display: list-item;">
+  <a href="60-white-street-phe">
+    <div class="img-container"><img src="img/listing-img/s3.amazonaws.com-core-listing-images-2016-08-24-140_west_71st_street_8g_01-730.jpg" alt="60 White Street, PHE"></div>
+  </a>
+    <p class="listing-prize">$9,275,000</p>
+    <p class="listing-name">60 White Street, PHE</p>
+    <p class="listing-info">3 Beds / 4 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Chelsea" style="opacity: 1; display: list-item;">
+  <a href="100-eleventh-avenue-19a">
+    <div class="img-container"><img src="img/listing-img/media.realplusonline.com--CORE-2098270-60_Riverside_Boulevard_2702_01.jpg"></div>
+  </a>
+    <p class="listing-prize">$8,950,000</p>
+    <p class="listing-name">100 Eleventh Avenue, 19A</p>
+    <p class="listing-info">4 Beds / 3.5 Baths</p>
+    <p class="open-house-info"><span class="label">Open House:</span><span>Sun, Mar 12th, 12:00 - 1:30 </span><br></p>    <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Tribeca" style="opacity: 1; display: list-item;">
+  <a href="93-worth-street-ph7">
+    <div class="img-container"><img src="img/listing-img/s3.amazonaws.com-core-listing-images-2016-07-26-100_11th_avenue_19a_01-337.jpg" alt="93 Worth Street, PH7"></div>
+  </a>
+    <p class="listing-prize">$8,950,000</p>
+    <p class="listing-name">93 Worth Street, PH7</p>
+    <p class="listing-info">4 Beds / 4.5 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Soho" style="opacity: 1; display: list-item;">
+  <a href="15-renwick-street-ph3">
+    <div class="img-container"><img src="img/listing-img/s3.amazonaws.com-core-listing-images-2016-07-22-425_west_53rd_street_ph3_01-306.jpg" alt="15 Renwick Street, PH3"></div>
+  </a>
+    <p class="listing-prize">$8,900,000</p>
+    <p class="listing-name">15 Renwick Street, PH3</p>
+    <p class="listing-info">4 Beds / 5 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+<li class="listing-teaser" data-nbh="Chelsea" style="opacity: 1; display: list-item;">
+  <a href="100-eleventh-avenue-19a">
+    <div class="img-container"><img src="img/listing-img/media.realplusonline.com--CORE-2098270-60_Riverside_Boulevard_2702_01.jpg"></div>
+  </a>
+    <p class="listing-prize">$8,950,000</p>
+    <p class="listing-name">100 Eleventh Avenue, 19A</p>
+    <p class="listing-info">4 Beds / 3.5 Baths</p>
+    <p class="open-house-info"><span class="label">Open House:</span><span>Sun, Mar 12th, 12:00 - 1:30 </span><br></p>    <p class="listing-contact">&nbsp;</p>
+</li>
+<li class="listing-teaser" data-nbh="Tribeca" style="opacity: 1; display: list-item;">
+  <a href="11-beach-street-8a">
+    <div class="img-container"><img src="img/listing-img/media.realplusonline.com--CORE-16320801-229_East_2nd_Street_01.jpg" alt="11 Beach Street, 8A"></div>
+  </a>
+    <p class="listing-prize">$8,895,000</p>
+    <p class="listing-name">11 Beach Street, 8A</p>
+    <p class="listing-info">5 Beds / 4.5 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Soho" style="opacity: 1; display: list-item;">
+  <a href="42-crosby-street-4n">
+    <div class="img-container"><img src="img/listing-img/media.realplusonline.com--CORE-16320837-200_East_57th_Street_17G_w_01.jpg" alt="42 Crosby Street, 4N"></div>
+  </a>
+    <p class="listing-prize">$8,400,000</p>
+    <p class="listing-name">42 Crosby Street, 4N</p>
+    <p class="listing-info">3 Beds / 3 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Chelsea" style="opacity: 1; display: list-item;">
+  <a href="212-west-18th-street-9d">
+    <div class="img-container"><img src="img/listing-img/media.realplusonline.com--CORE-2021973-650_Sixth_Avenue_3H_w_01.jpg" alt="212 West 18th Street, 9D"></div>
+  </a>
+    <p class="listing-prize">$7,950,000</p>
+    <p class="listing-name">212 West 18th Street, 9D</p>
+    <p class="listing-info">2 Beds / 2 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Tribeca" style="opacity: 1; display: list-item;">
+  <a href="27a-harrison-street">
+    <div class="img-container"><img src="img/listing-img/media.realplusonline.com--CORE-2061817-450_West_17th_Street_1509_07.jpg" alt="27A Harrison Street"></div>
+  </a>
+    <p class="listing-prize">$7,495,000</p>
+    <p class="listing-name">27A Harrison Street</p>
+    <p class="listing-info">3 Beds / 3 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Soho" style="opacity: 1; display: list-item;">
+  <a href="15-renwick-street-ph4">
+    <div class="img-container"><img src="img/listing-img/s3.amazonaws.com-core-email-marketing-custom_listings-74_Kent_Exterior_Day.jpg" alt="15 Renwick Street, PH4"></div>
+  </a>
+    <p class="listing-prize">$7,150,000</p>
+    <p class="listing-name">15 Renwick Street, PH4</p>
+    <p class="listing-info">3 Beds / 3.5 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Upper West Side" style="opacity: 1; display: list-item;">
+  <a href="160-west-66th-street-phc">
+    <div class="img-container"><img src="img/listing-img/s3.amazonaws.com-core-email-marketing-custom_listings-1697_Broadway_302_r_01.jpeg.jpg" alt="160 West 66th Street, PHC"></div>
+  </a>
+    <p class="listing-prize">$6,850,000</p>
+    <p class="listing-name">160 West 66th Street, PHC</p>
+    <p class="listing-info">2 Beds / 2.5 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Upper East Side" style="opacity: 1; display: list-item;">
+  <a href="52-east-72nd-street-pha">
+    <div class="img-container"><img src="img/listing-img/s3.amazonaws.com-core-email-marketing-email_marketing-core-custom_listings-2737_Broadway_01.jpg" alt="52 East 72nd Street, PHA"></div>
+  </a>
+    <p class="listing-prize">$6,495,000</p>
+    <p class="listing-name">52 East 72nd Street, PHA</p>
+    <p class="listing-info">4 Beds / 3.5 Baths</p>
+    <p class="open-house-info"><span class="label">Open House:</span><span>Thu, Mar 9th, 12:00 - 2:00 </span><br><span>Sun, Mar 12th, 12:00 - 1:00 </span><br></p>    <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Tribeca" style="opacity: 1; display: list-item;">
+  <a href="87-leonard-street-maisa">
+    <div class="img-container"><img src="img/listing-img/s3.amazonaws.com-core-listing-images-2016-07-13-68_conselyea_street_01-155.jpg" alt="87 Leonard Street, MAISA"></div>
+  </a>
+    <p class="listing-prize">$6,495,000</p>
+    <p class="listing-name">87 Leonard Street, MAISA</p>
+    <p class="listing-info">3 Beds / 3.5 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Williamsburg S Side" style="opacity: 1; display: list-item;">
+  <a href="109-south-9th-street">
+    <div class="img-container"><img src="img/listing-img/s3.amazonaws.com-core-listing-images-2016-07-26-100_11th_avenue_19a_01-337.jpg" alt="109 South 9th Street"></div>
+  </a>
+    <p class="listing-prize">$6,250,000</p>
+    <p class="listing-name">109 South 9th Street</p>
+    <p class="listing-info">9 Beds / 8.5 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Park Slope" style="opacity: 1; display: list-item;">
+  <a href="178-garfield-place">
+    <div class="img-container"><img src="img/listing-img/s3.amazonaws.com-core-listing-images-2016-08-11-310_riverside_drive_313_01-572.jpg" alt="178 Garfield Place"></div>
+  </a>
+    <p class="listing-prize">$5,995,000</p>
+    <p class="listing-name">178 Garfield Place</p>
+    <p class="listing-info">6 Beds / 3.5 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Chelsea" style="opacity: 1; display: list-item;">
+  <a href="450-west-17th-street-1509">
+    <div class="img-container"><img src="img/listing-img/s3.amazonaws.com-core-email-marketing-email_marketing-core-custom_listings-1631_NE_9th_Street_01.jpg" alt="450 West 17th Street, 1509"></div>
+  </a>
+    <p class="listing-prize">$5,950,000</p>
+    <p class="listing-name">450 West 17th Street, 1509</p>
+    <p class="listing-info">3 Beds / 2.5 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Soho" style="opacity: 1; display: list-item;">
+  <a href="15-renwick-street-th3">
+    <div class="img-container"><img src="img/listing-img/s3.amazonaws.com-core-email-marketing-email_marketing-core-custom_listings-222_North_8th_Commercial.jpeg.jpg" alt="15 Renwick Street, TH3"></div>
+  </a>
+    <p class="listing-prize">$5,900,000</p>
+    <p class="listing-name">15 Renwick Street, TH3</p>
+    <p class="listing-info">3 Beds / 3.5 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Soho" style="opacity: 1; display: list-item;">
+  <a href="284-lafayette-street-4d">
+    <div class="img-container"><img src="img/listing-img/s3.amazonaws.com-core-listing-images-2016-07-22-425_west_53rd_street_ph3_01-306.jpg" alt="284 Lafayette Street, 4D"></div>
+  </a>
+    <p class="listing-prize">$5,850,000</p>
+    <p class="listing-name">284 Lafayette Street, 4D</p>
+    <p class="listing-info">3 Beds / 3.5 Baths</p>
+    <p class="open-house-info"><span class="label">Open House:</span><span>Sun, Mar 12th, 11:30 - 1:00 </span><br></p>    <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Upper West Side" style="opacity: 1; display: list-item;">
+  <a href="41-west-96th-street-15ab">
+    <div class="img-container"><img src="img/listing-img/s3.amazonaws.com-core-listing-images-2016-08-22-332_east_77th_street_14_01-676.jpg" alt="41 West 96th Street, 15AB"></div>
+  </a>
+    <p class="listing-prize">$5,775,000</p>
+    <p class="listing-name">41 West 96th Street, 15AB</p>
+    <p class="listing-info">4 Beds / 4.5 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Brooklyn Heights" style="opacity: 1; display: list-item;">
+  <a href="360-furman-street-1004">
+    <div class="img-container"><img src="img/listing-img/s3.amazonaws.com-core-listing-images-2016-08-24-140_west_71st_street_8g_01-730.jpg" alt="360 Furman Street, 1004"></div>
+  </a>
+    <p class="listing-prize">$4,995,000</p>
+    <p class="listing-name">360 Furman Street, 1004</p>
+    <p class="listing-info">4 Beds / 4 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+<li class="listing-teaser" data-nbh="Upper West Side" style="opacity: 1; display: list-item;">
+  <a href="455-central-park-west-18c">
+    <div class="img-container"><img src="img/listing-img/s3.amazonaws.com-core-listing-images-2016-08-25-220_west_111th_street_2b_01-757.jpg" alt="455 Central Park West, 18C"></div>
+  </a>
+    <p class="listing-prize">$4,895,000</p>
+    <p class="listing-name">455 Central Park West, 18C</p>
+    <p class="listing-info">3 Beds / 4 Baths</p>
+        <p class="listing-contact">&nbsp;</p>
+</li>
+
+</ul>
+    
+</section>
+
+</main>
+
+
+
+
+
+<!--       footer start                -->
+<footer>
+  <div class="inner">
+   <!--
+    @TODO reove once xl-site is launched
+
+    -->
+    <style>
+        /**/
+               .addresses {
+                   width: 100%;
+                   margin-top: 15px;
+               }
+
+               .addresses p{
+                   width: 25%;
+                   float: left;
+                   margin-bottom: 25px;
+               }
+
+
+
+
+               @media only screen and (max-width: 768px) {
+                   .addresses p{
+                       width: 50%;
+                       float: left;
+                   }
+               }
+
+        #footer-page-functions {
+            display: none;
+        }
+    </style>
+
+
+
+
+    <div class="addresses">
+        <p>
+            <b class="headTel">PADMINI JAIN</b><br>
+            
+            <a class="tel" href="tel:829-129-3889">829-129-3889</a><br>
+        </p>
+
+       <p>
+            <b class="headTel">Harshit Desai</b><br>
+            
+            <a class="tel" href="tel:983-379-9312">983-379-9312</a><br>
+        </p>
+        <p>
+            <b class="headTel">Yash Sharma</b><br>
+            
+            <a class="tel" href="tel:981-906-5421">981-906-5421</a><br>
+        </p>
+        <p>
+            <b class="headTel">Yash Sharma</b><br>
+            
+            <a class="tel" href="tel:989-279-9353">989-279-9353</a><br>
+        </p>
+
+               <div class="clearfix"> &nbsp;</div>
+
+    </div>
+
+    
+<section class="location">
+  <h3>FIND US</h3>
+  <p class="adr">4 B/26 Wellington, Shastri Nagar <br>
+Neighbourhood - Andheri West</p>
+
+<div class="elementor-icon-wrapper">
+      <a class="elementor-icon elementor-animation-bounce-in" href="https://www.google.co.il/maps?source=tldsi&amp;hl=ru" target="_blank">
+        <i class="fa fa-map-marker"></i>
+      </a>
+    </div>
+</section>
+
+</div>
+
+<div class="inner">
+    <br><br>
+    <p class="light">
+        All data and information set forth on this website regarding real property, for sale, purchase, rental and/or financing, are from sources regarded as reliable. No warranties are made as to the accuracy of any descriptions and/or other details and such information is subject to errors, omissions, changes of price, tenancies, commissions, prior sales, leases or financing, or withdrawal without notice. Square footages are approximate and may be verified by consulting a professional architect or engineer. All rights as to photographs and graphics are reserved to REAL DEAL HOUSING PRIVATE LIMITED. Customers should seek advice and proper legal counsel with respect to all closing costs, timing considerations, financing options, default provisions, zoning implications, renovation considerations and appropriate transfer taxes. Real Deal Housing PVT. LTD. represents and has a fiduciary duty to those sellers with respect to Real Deal's exclusives. Real Deal Housing PVT. LTD. may act as a dual agent if another agent of Real Deal Housing represents the buyer or tenant. Real Deal Housing represents the buyer or tenant when showing the exclusive listings of other real estate brokerage firms.
+
+
+    </p>
+
+    <div class="footer-lower-row">
+                <div id="bottom-ad">
+            <br><br>
+        </div>
+        
+        <div id="footer-center-info">
+           
+            Copyright © 2017 Real Deal Housing</div>
+
+        <div id="partner-logo">
+            <a target="_blank" href="#">
+            </a>
+        </div>
+    </div>
+</div></footer>
+</div><!-- end pagebody -->
+<div id="templates-container" class="hidden"></div>
+
+<div id="overlay-modal">
+    <div class="overlay-modal-inner">
+        <div class="modal-close-handle">
+            <div class="modal-close-handle-inner">
+                <a class="button large-button" href="javascript:hideModal()">
+                    X
+                    <!--<span class="state-hover">
+                        <img class="mouse-out" src="public/app-assets/img/modal-close-x.png" />
+                        <img class="mouse-over" src="<public/app-assets/img/modal-close-x-hover.png" />
+                    </span>
+                    -->
+                </a>
+            </div>
+
+        </div>
+        <div id="overlay-modal-spinner">
+            <div class="spinner-wrap">
+                <div class="sprite-spinner">
+                    <img src="img/spinner.gif">
+                </div>
+            </div>
+        </div>
+        <div class="content-target">
+        </div>
+    </div>
+</div>
+
+
+  <script>
+    $(window).load(function () {
+        trackRenderTime(14);
+    });
+  </script>
+  
+</body>
+</html>
